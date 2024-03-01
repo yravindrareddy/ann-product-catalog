@@ -1,0 +1,31 @@
+/* Apply a border-collapse property for better spacing */
+table {
+    border-collapse: collapse;
+    width: 100%; /* Ensure the table takes up the full width of its container */
+    margin-bottom: 20px; /* Add some space below the table */
+  }
+  
+  /* Style table headers */
+  th {
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 8px; /* Add padding to the header cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #ddd; /* Add a bottom border */
+  }
+  
+  /* Style table cells */
+  td {
+    padding: 8px; /* Add padding to the cells */
+    border-bottom: 1px solid #ddd; /* Add a bottom border */
+  }
+  
+  /* Style alternating rows */
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+  }
+  
+  /* Style hover effect on rows */
+  tr:hover {
+    background-color: #f2f2f2; /* Light gray background on hover */
+  }
+  
