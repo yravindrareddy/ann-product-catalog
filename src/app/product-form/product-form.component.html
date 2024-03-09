@@ -1,4 +1,10 @@
-<div class="form-container">
+<h2 mat-dialog-title>
+  <span>{{ action === 'Add' ? 'Add Product' : 'Edit Product' }}</span>
+  <button class="float-right" mat-icon-button mat-dialog-close aria-label="Close">
+    <mat-icon>close</mat-icon>
+  </button>  
+</h2>
+<div class="" mat-dialog-content>
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="form-field">
       <input matInput placeholder="Name" formControlName="name">
@@ -12,6 +18,24 @@
     <mat-form-field class="form-field">
       <input matInput type="number" placeholder="Availability Stock" formControlName="availableStock">
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">{{action}}</button>
+    <mat-form-field style="display: inline;">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="categoryId">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="file-upload">
+      <span>Choose Image</span>
+      <!-- Use ngModel to display selected file name -->
+      <input type="file" #fileInput (change)="onFileChange($event)" accept="image/*">      
+    </div>
+    {{selectedFileName}}
+    <div mat-dialog-actions>      
+      <button mat-button color="primary" type="submit" [disabled]="productForm.invalid">{{ action === 'Edit' ? 'Update' : action }}</button>
+      <button mat-button mat-dialog-close>Cancel</button>
+    </div>
   </form>
+  
 </div>

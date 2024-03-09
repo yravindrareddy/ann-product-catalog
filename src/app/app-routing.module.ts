@@ -4,7 +4,7 @@ import { BrowserUtils } from '@azure/msal-browser';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MsalGuard } from '@azure/msal-angular';
-
+import { ManageProductsComponent } from './manage-products/manage-products.component';
 
 const routes: Routes = [
   {
@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'manage',
+    component: ManageProductsComponent,
   },
   {
     // Needed for Error routing

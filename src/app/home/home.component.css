@@ -1,31 +1,85 @@
-/* Apply a border-collapse property for better spacing */
-table {
-    border-collapse: collapse;
-    width: 100%; /* Ensure the table takes up the full width of its container */
-    margin-bottom: 20px; /* Add some space below the table */
-  }
-  
-  /* Style table headers */
-  th {
-    background-color: #f2f2f2; /* Light gray background */
-    padding: 8px; /* Add padding to the header cells */
-    text-align: left; /* Align text to the left */
-    border-bottom: 2px solid #ddd; /* Add a bottom border */
-  }
-  
-  /* Style table cells */
-  td {
-    padding: 8px; /* Add padding to the cells */
-    border-bottom: 1px solid #ddd; /* Add a bottom border */
-  }
-  
-  /* Style alternating rows */
-  tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light gray background for even rows */
-  }
-  
-  /* Style hover effect on rows */
-  tr:hover {
-    background-color: #f2f2f2; /* Light gray background on hover */
-  }
-  
+/* styles.css */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product-name {
+  font-size: 1.2em;
+}
+
+.product-description {
+  font-size: 0.9em;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+.product-stock {
+  font-style: italic;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  width: 50%;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+}
+
+.product-card {
+  width: 270px; /* Set the width of each product card */
+  margin-right: 20px; /* Adjust the margin between product cards */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%; /* Make the image fill the entire width of the product card */
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Optional: Add a border between image and card */
+}
+
+
+.product-details {
+  padding: 16px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-description {
+  margin-top: 8px;
+  color: #555;
+}
+
+.product-price, .product-stock {
+  margin-top: 8px;
+  color: #333;
+}

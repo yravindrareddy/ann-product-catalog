@@ -2,7 +2,7 @@
   <a class="title" href="/">{{ title }}</a>
 
   <div class="toolbar-spacer"></div>
-
+  <a mat-button [routerLink]="['manage']" *ngIf="isAdmin">Manage Products</a>
   <a mat-button [routerLink]="['profile']">Profile</a>
 
   <button mat-raised-button *ngIf="!loginDisplay" (click)="login()">Login</button>

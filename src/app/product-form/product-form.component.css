@@ -1,13 +1,42 @@
-:host {
-    display: flex;
-    justify-content: center;
-  }
-  
   .form-container {
     width: 300px; /* Adjust width as needed */
+    display: flex;
+    justify-content: center;
   }
   
   .form-field {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .float-right{
+    float: right;
+  }
+
+  .file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .file-upload input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .file-upload {
+    margin-top: 20px; /* Adjust margin as needed */    
   }
